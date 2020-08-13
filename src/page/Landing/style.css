@@ -1,0 +1,117 @@
+#landing-block {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-logo {
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+.weather-logo h1 {
+  font-size: 4.8rem;
+  line-height: 4.6rem;
+  margin-top: 0.8rem;
+  margin-left: 0.8rem;
+  font-family: Capriola;
+  color: lightcyan;
+}
+
+.weather-logo h3 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 4.6rem;
+  margin-top: 0.8rem;
+  font-family: Proza Libre;
+  color: gainsboro;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin: 3.2rem 0;
+}
+
+.buttons-container a {
+  width: 30rem;
+  height: 10.4rem;
+  border-radius: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: rgba(77, 243, 243, 0.335);
+  transition: background-color 0.6s;
+}
+
+.buttons-container a:hover {
+  background-color: rgba(23, 102, 102, 0.335);
+}
+
+.buttons-container img {
+  width: 8rem;
+}
+
+.buttons-container a:first-child {
+  margin-right: 1.6rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: black;
+  font-family: Proza Libre;
+  text-decoration: none;
+}
+
+@media (min-width: 1100px) {
+  #landing-content {
+    max-width: 1100px;
+
+    display: grid;
+    grid-template-rows: 350px 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .buttons-container {
+    display: table;
+  }
+
+  .buttons-container img {
+    width: 10rem;
+  }
+
+  .buttons-container a {
+    height: 12.4rem;
+  }
+
+  .buttons-container a:first-child {
+    margin-bottom: 2.8rem;
+  }
+
+  .weather-logo {
+    margin: auto;
+    margin-right: 10rem;
+  }
+
+  footer {
+    margin-right: 10rem;
+  }
+}

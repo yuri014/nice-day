@@ -1,0 +1,7 @@
+main {
+    margin-top: 4.2rem;
+}
+
+.avatar-container {
+    height: calc(100vh - 5.8rem);
+}
