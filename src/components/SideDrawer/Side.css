@@ -22,13 +22,13 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   font-size: 2.6rem;
   margin-left: 10%;
 }
 
 .side-drawer li {
-  margin: 1.2rem 0;
+  margin: 2.4rem 0;
   color: black;
   text-shadow: 1px 1px 5px cornflowerblue;
 }

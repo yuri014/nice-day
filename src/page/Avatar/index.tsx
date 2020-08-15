@@ -1,14 +1,12 @@
 import React from "react";
 
-import "./style.css";
-
-import Header from "../../components/Header/Header";
+import avatarTheme from "../../data/Avatar";
+import WeatherApp from "../../components/Weather/Weather";
 
 function Avatar() {
+ 
   return (
-    <div className="avatar-container">
-      <Header />
-    </div>
+    <WeatherApp propsTheme={avatarTheme} />
   );
 }
 

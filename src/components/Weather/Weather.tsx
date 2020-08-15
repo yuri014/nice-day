@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./style.css"
+import "./Weather.css";
 
 import Header from "../../components/Header/Header";
 
@@ -9,15 +9,20 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
-const pokeapi = "https://pokeapi.co/api/v2/type/"
+interface ArrayThemeProps {
+  type: string;
+  img: string;
+}
 
-function Pokemon() {
+interface WeatherAppProps {
+  propsTheme: ArrayThemeProps[];
+}
+
+const WeatherApp: React.FC<WeatherAppProps> = ({ propsTheme }) => {
   const [query, setQuery] = useState("");
   const [weather, setWeather]: any = useState({});
 
-  const [themeUrl, setThemeUrl] = useState("");
   const [themeImg, setThemeImg] = useState("");
-  const [themeName, setThemeName] = useState("");
 
   const dateBuilder = (event: Date) => {
     let months = [
@@ -54,13 +59,13 @@ function Pokemon() {
 
   const search = (event: React.KeyboardEvent) => {
     if (event.key === "Enter") {
-      localStorage.clear();
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then((response) => response.json())
         .then((result) => {
           setQuery("");
-          setThemeUrl("");
           setWeather(result);
+          setThemeImg("")
+          console.log(result);
         });
     }
   };
@@ -95,34 +100,16 @@ function Pokemon() {
     }
   };
 
-  const handleThemeApi = () => {
-    fetch(`${pokeapi}${type}`)
-      .then((response) => response.json())
-      .then((result) => {
-        const random: number = Math.floor(
-          Math.random() * result.pokemon.length
-        );
-        const url = result.pokemon[random].pokemon.url;
-        return setThemeUrl(url);
-      });
-  };
-
   const handleThemeImg = () => {
-    fetch(`${themeUrl}`)
-      .then((response) => response.json())
-      .then((result) => {
-        if (result.sprites.other["official-artwork"].front_default === null) {
-          //? Move this
-          var alerted = localStorage.getItem("alerted") || "";
-          if (alerted !== "yes") {
-            alert("Some Pokémon images are null");
-            localStorage.setItem("alerted", "yes");
-          }
-        } else {
-          setThemeName(result.species.name);
-          setThemeImg(result.sprites.other["official-artwork"].front_default);
-        }
-      });
+    propsTheme.map((image) => {
+      if (image.type === type) {
+        const replaceImg = image.img;
+        setThemeImg(replaceImg.toString().replace(/,/g, ""));
+        return replaceImg.toString().replace(/,/g, "");
+      } else {
+        return null;
+      }
+    });
   };
 
   return (
@@ -145,9 +132,9 @@ function Pokemon() {
         </div>
         {typeof weather.main != "undefined" ? (
           <div className="climatic-content">
-            {themeUrl === "" ? handleThemeApi() : handleThemeImg()}
+            {themeImg === "" && handleThemeImg()}
             <div className="weather-card">
-              <img src={themeImg} alt={themeName} />
+              <img src={themeImg} alt="" />
             </div>
             <div className="location-block">
               <div className="location-content">
@@ -176,4 +163,4 @@ function Pokemon() {
   );
 }
 
-export default Pokemon;
+export default WeatherApp;

@@ -29,15 +29,15 @@ function Landing() {
           </Link>
         </div>
         <div className="buttons-container">
-          <Link to="/pokemon">
+          <Link to="/naruto">
             <img
-              src="https://www.freepngimg.com/thumb/pokemon/35997-1-anime-pokemon-transparent-picture.png"
+              src="https://i.pinimg.com/originals/d3/aa/30/d3aa3027791f41764861a6b481b856bb.png"
               alt=""
             />
           </Link>
-          <Link to="/pokemon">
+          <Link to="/cats">
             <img
-              src="https://i2.wp.com/multarte.com.br/wp-content/uploads/2019/03/display-pokemon.png?fit=458%2C458&ssl=1"
+              src="http://arbroath.cats.org.uk/uploads/images/pages/cats_pairs.png"
               alt=""
             />
           </Link>
