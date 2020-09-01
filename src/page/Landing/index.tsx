@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./style.css";
+
 import Logo from "../../components/Logo/Logo";
 
-function Landing() {  
+function Landing() {
   return (
     <div id="landing-block">
       <div id="landing-content" className="container">
