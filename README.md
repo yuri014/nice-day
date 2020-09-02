@@ -1,4 +1,4 @@
-# POKÉWEATHER :sunny:
+# NICE-DAY :sunny:
 
 <p align="center">
   <img src="https://img.shields.io/badge/-TypeScript-1C1C1C?style=flat&logo=Typescript&logoColor=blue">
@@ -21,7 +21,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How it works :cloud:
 
-The application will display a Pokémon image according to the weather of the reseached city or the time of you device.
+The application will display a thematic image according to the weather of the reseached city or the time of you device.
 
 ## Available Scripts
 
