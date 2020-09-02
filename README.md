@@ -13,10 +13,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Screenshots :snowflake:
 
 <p align="center">
-  <img src="./src/images/landing.PNG" height="150" >
-  <img src="./src/images/mobile_mage.PNG" height="150" >
-  <img src="./src/images/cold_image.PNG" height="150" >
-    <img src="./src/images/pc_image.PNG" height="150" >
+  <img src="./src/assets/hot_screenshot.PNG" height="150" >
+  <img src="./src/assets/desktop_rain.PNG" height="150" >
+  <img src="./src/assets/cold_screenshot.PNG" height="150" >
+  <br>
+  <img src="./src/assets/mobile_menu_screenshot.PNG" height="150" >
+  <img src="./src/assets/mobile_menu_temp.PNG" height="150" >
+  <img src="./src/assets/night_mobile.PNG" height="150" >
 </p>
 
 ## How it works :cloud:
