@@ -15,10 +15,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <p align="center">
   <img src="./src/assets/hot_screenshot.PNG" height="150" >
   <img src="./src/assets/desktop_rain.PNG" height="150" >
-  <img src="./src/assets/cold_screenshot.PNG" height="150" >
   <br>
+  <img src="./src/assets/cold_screenshot.PNG" height="150" >
   <img src="./src/assets/mobile_menu_screenshot.PNG" height="150" >
-  <img src="./src/assets/mobile_menu_temp.PNG" height="150" >
+  <img src="./src/assets/mobile_normal_temp.PNG" height="150" >
   <img src="./src/assets/night_mobile.PNG" height="150" >
 </p>
 
