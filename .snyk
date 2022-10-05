@@ -36,3 +36,5 @@ patch:
         patched: '2022-07-04T13:41:55.590Z'
     - react-scripts > jest > jest-cli > @jest/core > jest-config > jest-runner > jest-environment-jsdom > jsdom > data-urls > whatwg-url > lodash:
         patched: '2022-07-04T13:41:55.590Z'
+    - '@testing-library/jest-dom > lodash':
+        patched: '2022-10-05T16:46:27.854Z'
